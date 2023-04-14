@@ -8,9 +8,11 @@ public class DemoAnotaciones {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        IinstrumentroMusical instrumento = context.getBean("miGuitarra", IinstrumentroMusical.class);
+        IinstrumentroMusical instrumento = context.getBean("guitarra", IinstrumentroMusical.class);
 
         System.out.println(instrumento.obtenerSonido());
+
+        System.out.println(instrumento.obtenerAfinacion());
 
         context.close();
     }
